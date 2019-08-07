@@ -307,7 +307,7 @@ public class LogCollector implements CrashHandlerListener {
             BufferedReader reader = null;
             BufferedWriter writer = null;
             try {
-                createCleanCommand();
+                //createCleanCommand();
                 // 获取 logcat
                 Process process = Runtime.getRuntime().exec(
                         getCommandLine.toArray(new String[getCommandLine.size()]));
@@ -319,7 +319,7 @@ public class LogCollector implements CrashHandlerListener {
 
                 String str;
                 while (!isCrash && ((str = reader.readLine()) != null)) {
-                    createCleanCommand();
+                    //createCleanCommand();
                     if (filterStringType(str)) { continue; }
 
                     // 写数据
